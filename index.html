@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task One</title>
+
+	<style type="text/css">
+
+		body {
+			font-size: 20px;
+		}
+
+		.inputSection , .outputSection {
+			width: 40%;
+			height: 30vh;
+			min-width: 300px;
+			border: solid 1px grey;
+			margin: 20px auto;
+		}
+
+		form {
+			width: 100%;
+			min-width: 200px;
+			padding: 20px 5px;
+		}
+
+		label {
+			font-weight: 700;
+			margin: 10px 40px 5px 40px;
+		}
+
+		.input {
+			margin: 0 40px 20px 40px;
+			width: 80%;
+			height: 20px;
+		}
+
+		.submit {
+			width: 90px;
+			margin: 0 40px;
+			height: 30px;
+			cursor: pointer;
+		}
+
+		p {
+			height: 20px;
+			margin: 20px 40px;
+		}
+
+		.button {
+			width: 90px;
+			height: 40px;
+			color: #fff;
+			border-style: none;
+			border-radius: 5px;
+			background-color: #007bff;
+			margin: 20px 0 20px 80%;
+			cursor: pointer;
+		}
+
+	</style>
+
+	<script>
+		function addNumbers() {
+			var numberOne = parseFloat(document.getElementById("numOne").value);
+			var numberTwo = parseFloat(document.getElementById("numTwo").value);
+			var total = (numberOne + numberTwo).toFixed(1);
+			document.getElementById("sum").innerHTML = total;
+		}
+	</script>
+
+</head>
+<body>
+	<div class="inputSection">
+		<form>
+			<label>Первое число :</label><br>
+			<input type="number" name="numberOne" value="0.1" class="input" id="numOne"><br>
+			<label>Второе число :</label><br>
+			<input type="number" name="numberTwo" value="0.2" class="input" id="numTwo"><br>
+			<input type="button" value="Сложить" class="submit" onclick="addNumbers()">
+		</form>	
+	</div>
+
+	<div class="outputSection">
+		<form action="index.html">
+			<label>Резултать :</label><br>
+			<p id="sum"></p>
+			<button class="button">OK</button>	
+		</form>
+		
+	</div>
+		
+</body>
+</html>
